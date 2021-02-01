@@ -6,11 +6,10 @@ import java.util.*;
 public class Main {
 
 
-    public static double userInput() {
+    public static double collectTemp() {
         System.out.print("Please enter a temperature in Fahrenheit: ");
         Scanner input = new Scanner(System.in);
-        double fTemp = input.nextDouble();
-        return fTemp;
+        return input.nextDouble();
     }
 
     public static double convertTemp(double fTemp) {
@@ -26,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         double fTemp = 0;
         while (fTemp >= -460) {
-            fTemp = userInput();
+            fTemp = collectTemp();
             double cTemp = convertTemp(fTemp);
             displayTemp(fTemp, cTemp);
         }

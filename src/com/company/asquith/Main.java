@@ -6,6 +6,16 @@ import java.util.*;
 public class Main {
 
 
+    public static void main(String[] args) {
+        double fTemp = 0;
+        while (fTemp >= -460) {
+            fTemp = collectTemp();
+            double cTemp = convertTemp(fTemp);
+            displayTemp(fTemp, cTemp);
+        }
+    }
+
+
     public static double collectTemp() {
         System.out.print("Please enter a temperature in Fahrenheit: ");
         Scanner input = new Scanner(System.in);
@@ -20,14 +30,5 @@ public class Main {
         System.out.print(fTemp + "° Fahrenheit is equal to ");
         System.out.printf("%.3f", cTemp);
         System.out.println("° Celsius\n");
-    }
-
-    public static void main(String[] args) {
-        double fTemp = 0;
-        while (fTemp >= -460) {
-            fTemp = collectTemp();
-            double cTemp = convertTemp(fTemp);
-            displayTemp(fTemp, cTemp);
-        }
     }
 }
